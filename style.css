@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    /* Primary Colors */
+    --white-color: #FFFFFF;
+    /* White */
+    --dark-color: #1f1630;
+    /* Dark Blue (Primary Color) */
+    --primary-color: linear-gradient(180deg, #3f497a, #232945);
+    /* Muted Blue */
+    --secondary-color: linear-gradient(180deg, #cdffd8, #94b9ff);
+    /* Light Greenish Tint */
+    --light-pink-color: #C9FADB;
+    --medium-gray-color: #F9FBFF;
+
+    /* --light-green-color: #C9FADB;    Light Greenish Tint */
+    /* --light-gray-blue-color: #F9FBFF; Very Light Grayish Blue */
+
+    /* Font size */
+
+    --font-size-xs: 0.5rem;
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Font-weight-*/
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Stylings for whole site */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 60px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title-B {
+    color: var(--dark-color);
+    text-align: center;
+    padding: 60px 0 20px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+}
+
+.section-title-B::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--primary-color);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Navbar styling */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
+header .navbar {
+    display: flex;
+    padding: 20px 30px 20px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container for the logo and text */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    /* Aligns logo and text vertically centered */
+    gap: 10px;
+    /* Adds spacing between the logo and text */
+}
+
+/* Logo Image Styling */
+.nav-H-logo {
+    height: 60px;
+    /* Adjust logo size */
+    width: auto;
+}
+
+/* Text Container */
+.nav-logo-text {
+    color: var(--white-color);
+    text-align: center;
+    flex-direction: column;
+    /* Stacks heading and description vertically */
+    justify-content: center;
+}
+
+/* Main Heading Styling */
+.H-logo-text {
+    font-size: var(--font-size-m);
+}
+
+.H-logo-text::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: block;
+    margin: 1px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Description Text Styling */
+.H-Logo-Description {
+    font-size: var(--font-size-s);
+    margin-top: 3px;
+}
+
+/* NCCTIT title */
+.ncctit-title {
+    display: none;
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 15px;
+    color: var(--white-color);
+    font-size: var(--font-size-s);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+    display: block;
+    /* Ensure the link fills the space */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--dark-color);
+    background: var(--secondary-color);
+    /* Hover gradient */
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+/* Hero Section styling */
+.banner-section {
+    text-align: center;
+    background: var(--primary-color);
+    display: flex; /* Enable Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 35vh;  /* Full viewport height */
+}
+
+/* Section content styling */
+.banner-section .section-content {
+    display: flex;
+    flex-direction: column; /* Stack the content vertically */
+    align-items: center;  /* Center items horizontally */
+    justify-content: center;  /* Center content vertically */
+    color: var(--white-color);
+}
+
+/* Hero details styling */
+.banner-section .hero-details {
+    text-align: center;  /* Ensure text inside is centered */
+}
+
+/* Title styling */
+.banner-section .hero-details .title {
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-xxl);
+    
+    font-family: "Headland One", serif;
+    margin-bottom: 10px;  /* Adjust margin as needed */
+}
+
+/* Title t1 styling */
+.banner-section .hero-details .t1 {
+    font-size: var(--font-size-xxl);
+    color: #FF5733;  /* Example color for t1 (National Conference On) */
+    font-family: "Headland One", serif;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); 
+}
+
+/* Title t2 styling */
+.banner-section .hero-details .t2 {
+    font-size: var(--font-size-xxl);
+    color: #33B5FF;  /* Example color for t2 (Current Trends In IT) */
+    font-family: "Headland One", serif;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Shadow effect for t1 */
+}
+
+/* Title t3 styling */
+.banner-section .hero-details .t3 {
+    font-size: var(--font-size-xxl);
+    color: #4CAF50;  /* Example color for t3 (NCCTIT-2025) */
+    font-family: "Headland One", serif;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Shadow effect for t1 */
+}
+
+
+.banner-section .section-content .br-line {
+    margin: 50px;
+}
+
+/* Subtitle styling */
+.banner-section .hero-details .subtitle {
+    margin-top: 10px;
+    font-family: "Headland One", serif;
+    font-size: var(--font-size-xxl);
+    font-weight: var(--font-weight-semibold);
+}
+
+
+/* About section styling */
+.about-section {
+    min-height: 100vh;
+    background: var(--secondary-color);
+}
+
+.about-section .space {
+    padding-top: 80px;
+}
+
+.about-section .section-title-B {
+    padding-top: 50px;
+}
+
+.about-section .break-line {
+    width: 80%;
+    /* Set the width of the line */
+    margin: 10px auto;
+    /* Centers the line horizontally */
+    border: 1px solid var(--dark-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: auto;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-m);
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 70px;
+    text-align: justify;
+    font-size: var(--font-size-s);
+    justify-content: space-between;
+}
+
+/* .about-section .social-link-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+} */
+
+/* .about-section .social-link-list .social-link {
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+} */
+
+/* .about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+} */
+
+/* Objective Section Styling */
+.objective-section {
+    color: var(--white-color);
+    background: var(--primary-color);
+    padding: 50px 0 100px;
+}
+
+.objective-section .objective-details .text {
+    line-height: 40px;
+    margin: 20px 60px 30px 60px;
+    text-align: justify;
+    justify-content: space-between;
+    font-size: var(--font-size-m);
+}
+
+/* Topics Section Styling */
+.topics-section {
+    color: var(--dark-color);
+    background: var(--secondary-color);
+    padding: 50px 0 100px;
+}
+
+.topics-section .topics-details .text {
+    font-size: var(--font-size-l);
+    line-height: 40px;
+    margin: 20px 60px 30px 60px;
+    text-align: justify;
+    justify-content: space-between;
+    font-size: var(--font-size-m);
+}
+
+.topics-section .topics-details .topics-list {
+    font-size: var(--font-size-l);
+    text-align: center;
+}
+
+.topics-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping to the next row */
+    gap: 10px;
+    /* Space between items */
+    justify-content: space-between;
+    /* Ensures even spacing */
+}
+
+.topic {
+    flex: calc(100% / 3 - 32px);
+    /* 3 columns with space */
+    box-sizing: border-box;
+    /* Includes padding and borders in width/height */
+    background-color: #f4f4f4;
+    /* Optional: Background color */
+    padding: 10px;
+    /* Optional: Inner padding */
+    text-align: center;
+    /* Optional: Center text */
+    border: 1px solid #ccc;
+    /* Optional: Border for visibility */
+}
+
+/* Guidlines Styling */
+/* Guidelines Section Styling */
+.guidlines {
+    color: var(--white-color);
+    background: var(--primary-color);
+    padding: 50px 10px 100px;
+    /* Added horizontal padding for better spacing */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Section Title Styling */
+.guidlines .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    /* Use an accent color for better visibility */
+}
+
+/* Section Content Styling */
+.guidlines .section-content {
+    margin: 20px auto;
+    line-height: 1.6;
+}
+
+/* Text Styling */
+.guidlines .text {
+    line-height: 40px;
+    margin: 20px 60px 30px 60px;
+    text-align: justify;
+    justify-content: space-between;
+    font-size: var(--font-size-m);
+}
+
+/* Publication Section Styling */
+.Publication {
+    padding: 50px 100px 100px;
+    margin: 0;
+}
+
+.Publication .section-title {
+    font-size: 1.8rem;
+    color: var(--highlight-color);
+    /* Use a distinct highlight color */
+    margin: 0;
+}
+
+.Publication .guidlines-details {
+    padding: 15px;
+    background: var(--dark-secondary-color);
+    border-left: 5px solid var(--highlight-color);
+    border-radius: 5px;
+    margin: 0;
+}
+
+.Publication .guidlines-details .text {
+    line-height: 40px;
+    margin: 20px 60px 30px 60px;
+    text-align: justify;
+    justify-content: space-between;
+    font-size: var(--font-size-m);
+}
+
+/* Important Dates Styling */
+/* Container Styling */
+.schedule-container {
+    max-width: 700px;
+    margin: 20px auto 110px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+/* Table Styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+.schedule-table thead {
+    background: var(--primary-color);
+    color: white;
+}
+
+.schedule-table th {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+/* Body Styling */
+.schedule-table tbody {
+    background: #f9f9f9;
+}
+
+.schedule-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Alternate Row Background */
+.schedule-table tr:nth-child(even) {
+    background-color: #f1f5fc;
+}
+
+/* Hover Effect */
+.schedule-table tr:hover {
+    background-color: #e9eef9;
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 0.3s ease;
+}
+
+/* Committee section styling */
+/* Section Container */
+.organizing-committee {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.organizing-committee .section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Committee Group Styling */
+.committee-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #f7faff;
+    border: 1px solid #d9e7ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.committee-title {
+    font-size: 1.8em;
+    color: #0056b3;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.committee-title .icon {
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+.committee-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.committee-group ul li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.committee-group ul li span.name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.committee-group ul li span.designation {
+    font-size: 0.9em;
+    color: #666;
+    text-align: right;
+}
+
+.committee-group p {
+    font-size: 1.1em;
+    color: #555;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Registration Section */
+.registration-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.registration-section .fees-and-form-container {
+    display: flex;
+}
+
+/* Section Title */
+.registration-section .section-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--dark-color);
+    margin-bottom: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Fees and Form Container */
+.fees-and-form-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Fees Details Styling */
+.fees-details {
+    flex: 1;
+    min-width: 300px;
+    background: #f7faff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.fees-list {
+    list-style: none;
+    padding: 0;
+}
+
+.fees-list li {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.fees-list li:hover {
+    transform: scale(1.02);
+}
+
+.category {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.fee {
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.registration-form {
+    flex: 2;
+    min-width: 400px;
+    padding: 10px;
+    border: 1px solid #d9e7ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+/* Footer Styling */
+.footer-section {
+    text-align: center;
+    background-color: var(--dark-color);
+    /* Dark blue/gray color */
+    color: #ecf0f1;
+    /* Light text color */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-info,
+.footer-links,
+.footer-contact {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px;
+}
+
+
+.footer-section p,
+.footer-section a {
+    color: #ecf0f1;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.footer-section a:hover {
+    color: #f39c12;
+    /* Hover effect */
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #7f8c8d;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsive media query code for max width 1024px */
+@media screen and (max-width: 1024px) {
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* Container for the logo and text */
+
+
+.nav-H-logo {
+    height: 150px ;
+    /* Adjust logo size */
+    width: auto;
+}
+
+/* Text Container */
+.nav-logo-text {
+    color: var(--white-color);
+    text-align: center;
+    flex-direction: column;
+    /* Stacks heading and description vertically */
+    justify-content: center;
+}
+
+/* Main Heading Styling */
+.H-logo-text {
+    font-size: var(--font-size-xxl);
+}
+
+.H-logo-text::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    display: block;
+    margin: 1px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Description Text Styling */
+.H-Logo-Description {
+    font-size: var(--font-size-xl);
+    margin-top: 3px;
+}
+    
+    
+    /* NCCTIT title */
+    .ncctit-title {
+        display: hidden;
+    }
+
+    .ncctit-title .section-title {
+        font-size: var(--font-size-xl);
+        margin: 0;
+        padding: 0;
+        color: var(--white-color);
+    }
+
+    .ncctit-title .section-title::after {
+        content: "";
+        width: 80px;
+        height: 5px;
+        display: block;
+        margin: 3px auto 0;
+        border-radius: var(--border-radius-s);
+        background: var(--secondary-color);
+    }
+
+
+    /* Navbar styling */
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        display: block;
+        font-size: var(--font-size-xxl);
+    }
+
+    .navbar #menu-close-button {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+
+    .navbar #menu-open-button {
+        color: var(--white-color);
+    }
+
+
+    .navbar .nav-menu {
+        display: block;
+        position: fixed;
+        left: -600px;
+        top: 0;
+        width: 600px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        background: var(--white-color);
+        transition: left 0.2s ease;
+    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        color: var(--dark-color);
+        margin: 30px;
+        display: block;
+        margin-top: 40px;
+        font-size: var(--font-size-xxl);
+    }
+
+    .about-section .section-content {
+        flex-direction: column;
+    }
+
+    .about-section .about-details .text {
+        margin: 50px 20px 70px 20px;
+
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        font-size: var(--font-size-xl);
+    }
+
+    .topic {
+        flex: calc(100% / 2 - 32px);
+    }
+
+}
+
+/* Responsive media query code for max width 900px */
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .guidlines .section-title {
+        font-size: 1.5rem;
+    }
+
+    .guidlines .text {
+        font-size: 0.9rem;
+    }
+
+    .guidlines .section-content,
+    .Publication .guidlines-details {
+        padding: 15px;
+    }
+}
+
+/* Responsive media query code for max width 640px */
+@media screen and (max-width: 640px) {
+    .ncctit-title {
+        display: none;
+    }
+}
