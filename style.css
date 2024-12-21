@@ -431,37 +431,9 @@ header .navbar {
     line-height: 1.6;
 }
 
+
 /* Text Styling */
 .guidlines .text {
-    line-height: 40px;
-    margin: 20px 60px 30px 60px;
-    text-align: justify;
-    justify-content: space-between;
-    font-size: var(--font-size-m);
-}
-
-/* Publication Section Styling */
-.Publication {
-    padding: 50px 100px 100px;
-    margin: 0;
-}
-
-.Publication .section-title {
-    font-size: 1.8rem;
-    color: var(--highlight-color);
-    /* Use a distinct highlight color */
-    margin: 0;
-}
-
-.Publication .guidlines-details {
-    padding: 15px;
-    background: var(--dark-secondary-color);
-    border-left: 5px solid var(--highlight-color);
-    border-radius: 5px;
-    margin: 0;
-}
-
-.Publication .guidlines-details .text {
     line-height: 40px;
     margin: 20px 60px 30px 60px;
     text-align: justify;
@@ -542,7 +514,7 @@ header .navbar {
 /* Title Styling */
 .organizing-committee .section-title {
     text-align: center;
-    font-size: 2.5em;
+    font-size: var(--font-size-l);
     color: var(--dark-color);
     margin-bottom: 40px;
     font-weight: bold;
@@ -551,6 +523,10 @@ header .navbar {
 }
 
 /* Committee Group Styling */
+.committee {
+    font-size: var(--font-size-m);
+}
+
 .committee-group {
     margin-bottom: 40px;
     padding: 20px;
@@ -561,8 +537,8 @@ header .navbar {
 }
 
 .committee-title {
-    font-size: 1.8em;
-    color: #0056b3;
+    font-size: var(--font-size-xl);
+    color: var(--primary-color);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -592,18 +568,18 @@ header .navbar {
 
 .committee-group ul li span.name {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: var(--font-size-l);
     color: #333;
 }
 
 .committee-group ul li span.designation {
-    font-size: 0.9em;
+    font-size: var(--font-size-m);
     color: #666;
     text-align: right;
 }
 
 .committee-group p {
-    font-size: 1.1em;
+    font-size: var(--font-size-l);;
     color: #555;
     padding: 15px;
     background: #ffffff;
@@ -751,7 +727,7 @@ header .navbar {
 
     body.show-mobile-menu header::before {
         content: "";
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
         height: 100%;
@@ -763,41 +739,41 @@ header .navbar {
     /* Container for the logo and text */
 
 
-.nav-H-logo {
-    height: 150px ;
-    /* Adjust logo size */
-    width: auto;
-}
+    .nav-H-logo {
+        height: 150px ;
+        /* Adjust logo size */
+        width: auto;
+    }
 
-/* Text Container */
-.nav-logo-text {
-    color: var(--white-color);
-    text-align: center;
-    flex-direction: column;
-    /* Stacks heading and description vertically */
-    justify-content: center;
-}
+    /* Text Container */
+    .nav-logo-text {
+        color: var(--white-color);
+        text-align: center;
+        flex-direction: column;
+        /* Stacks heading and description vertically */
+        justify-content: center;
+    }
 
-/* Main Heading Styling */
-.H-logo-text {
-    font-size: var(--font-size-xxl);
-}
+    /* Main Heading Styling */
+    .H-logo-text {
+        font-size: var(--font-size-xxl);
+    }
 
-.H-logo-text::after {
-    content: "";
-    width: 100px;
-    height: 1px;
-    display: block;
-    margin: 1px auto 0;
-    border-radius: var(--border-radius-s);
-    background: var(--secondary-color);
-}
+    .H-logo-text::after {
+        content: "";
+        width: 100px;
+        height: 1px;
+        display: block;
+        margin: 1px auto 0;
+        border-radius: var(--border-radius-s);
+        background: var(--secondary-color);
+    }
 
-/* Description Text Styling */
-.H-Logo-Description {
-    font-size: var(--font-size-xl);
-    margin-top: 3px;
-}
+    /* Description Text Styling */
+    .H-Logo-Description {
+        font-size: var(--font-size-xl);
+        margin-top: 3px;
+    }
     
     
     /* NCCTIT title */
@@ -869,7 +845,14 @@ header .navbar {
 
     .about-section .section-content {
         flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        padding: 30px 20px 20px;
     }
+
+    .about-section .section-content .about-image-wrapper {
+        max-width: 100vw;
+    }    
 
     .about-section .about-details .text {
         margin: 50px 20px 70px 20px;
@@ -879,6 +862,7 @@ header .navbar {
     .footer-container {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
         gap: 20px;
         font-size: var(--font-size-xl);
     }
@@ -886,6 +870,32 @@ header .navbar {
     .topic {
         flex: calc(100% / 2 - 32px);
     }
+
+    .schedule-table {
+        width: 100%;
+ 
+        margin-top: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .committee-title {
+        font-size: var(--font-size-xl);
+    }
+
+    .committee-group ul li span.name {
+        font-size: var(--font-size-l);
+    }
+    
+    .committee-group ul li span.designation {
+        font-size: var(--font-size-m);
+    }
+    
+    .committee-group p {
+        font-size: var(--font-size-xs);
+        text-align: center;
+    }
+
 
 }
 
