@@ -125,7 +125,7 @@ header {
 
 header .navbar {
     display: flex;
-    padding: 20px 30px 20px 30px;
+    padding: 10px 30px 20px 0px;
     align-items: center;
     justify-content: space-between;
 }
@@ -135,13 +135,13 @@ header .navbar {
     display: flex;
     align-items: center;
     /* Aligns logo and text vertically centered */
-    gap: 10px;
+    gap: 20px;
     /* Adds spacing between the logo and text */
 }
 
 /* Logo Image Styling */
 .nav-H-logo {
-    height: 90px;
+    height: 80px;
     /* Adjust logo size */
     width: auto;
 }
@@ -163,7 +163,7 @@ header .navbar {
 .H-logo-text::after {
     content: "";
     width: 100px;
-    height: 1px;
+    height: 2px;
     display: block;
     margin: 1px auto 0;
     border-radius: var(--border-radius-s);
@@ -187,7 +187,7 @@ header .navbar {
 }
 
 .navbar .nav-menu .nav-link {
-    padding: 10px 15px;
+    padding: 0px 15px;
     color: var(--white-color);
     font-size: var(--font-size-s);
     border-radius: var(--border-radius-m);
@@ -211,7 +211,7 @@ header .navbar {
 /* Hero Section styling */
 .banner-section {
     text-align: center;
-    background: var(--primary-color);
+    background: radial-gradient(circle, rgba(63,73,122,1) 0%, rgba(35,41,69,1) 100%);;
     display: flex; /* Enable Flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -507,14 +507,14 @@ header .navbar {
     margin: 50px auto;
     padding: 40px;
     background: #ffffff;
-    border-radius: 15px;
+    border-radius: var(--border-radius-m);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Title Styling */
 .organizing-committee .section-title {
     text-align: center;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-s);
     color: var(--dark-color);
     margin-bottom: 40px;
     font-weight: bold;
@@ -523,9 +523,6 @@ header .navbar {
 }
 
 /* Committee Group Styling */
-.committee {
-    font-size: var(--font-size-m);
-}
 
 .committee-group {
     margin-bottom: 40px;
@@ -537,17 +534,12 @@ header .navbar {
 }
 
 .committee-title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-l);
     color: var(--primary-color);
     margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.committee-title .icon {
-    font-size: 1.5em;
-    color: #007bff;
 }
 
 .committee-group ul {
@@ -568,18 +560,18 @@ header .navbar {
 
 .committee-group ul li span.name {
     font-weight: bold;
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-m);
     color: #333;
 }
 
 .committee-group ul li span.designation {
-    font-size: var(--font-size-m);
+    font-size: var(--font-size-s);
     color: #666;
     text-align: right;
 }
 
 .committee-group p {
-    font-size: var(--font-size-l);;
+    font-size: var(--font-size-m);;
     color: #555;
     padding: 15px;
     background: #ffffff;
@@ -589,8 +581,8 @@ header .navbar {
 
 /* Registration Section */
 .registration-section {
-    max-width: 1200px;
-    margin: 50px auto;
+    max-width: 1000px;
+    margin: 0px auto;
     padding: 40px;
     background: #ffffff;
     border-radius: 15px;
