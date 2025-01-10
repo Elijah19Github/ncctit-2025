@@ -87,6 +87,16 @@ img {
     font-size: var(--font-size-xl);
 }
 
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
 .section-title-B {
     color: var(--dark-color);
     text-align: center;
@@ -103,16 +113,6 @@ img {
     margin: 10px auto 0;
     border-radius: var(--border-radius-s);
     background: var(--primary-color);
-}
-
-.section-title::after {
-    content: "";
-    width: 80px;
-    height: 5px;
-    display: block;
-    margin: 10px auto 0;
-    border-radius: var(--border-radius-s);
-    background: var(--secondary-color);
 }
 
 /* Navbar styling */
@@ -132,6 +132,7 @@ header .navbar {
 
 /* Container for the logo and text */
 .nav-logo {
+    margin-left: 10px;
     display: flex;
     align-items: center;
     /* Aligns logo and text vertically centered */
@@ -512,20 +513,20 @@ header .navbar {
     max-width: 1000px;
     margin: 50px auto;
     padding: 40px;
-    background: #ffffff;
+    background: var(--primary-color);
     border-radius: var(--border-radius-m);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Title Styling */
 .organizing-committee .section-title {
-    text-align: center;
-    font-size: var(--font-size-s);
-    color: var(--dark-color);
-    margin-bottom: 40px;
+    font-size: 2rem;
     font-weight: bold;
-    letter-spacing: 1.5px;
+    text-align: center;
+    margin-bottom: 20px;
     text-transform: uppercase;
+    color: var(--white-color);
+    /* Use an accent color for better visibility */
 }
 
 /* Committee Group Styling */
@@ -533,7 +534,7 @@ header .navbar {
 .committee-group {
     margin-bottom: 40px;
     padding: 20px;
-    background: #f7faff;
+    background: var(--secondary-color);
     border: 1px solid #d9e7ff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -617,6 +618,10 @@ header .navbar {
     flex-wrap: wrap;
 }
 
+.fees-and-form-container > * { 
+    flex: 0 0 50%; /* Set flex-basis to 50% */
+}
+
 /* Fees Details Styling */
 .fees-details {
     flex: 1;
@@ -661,15 +666,7 @@ header .navbar {
 }
 
 /* Form Styling */
-.registration-form {
-    flex: 2;
-    min-width: 400px;
-    padding: 10px;
-    border: 1px solid #d9e7ff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    background: #ffffff;
-}
+
 
 /* Footer Styling */
 .footer-section {
@@ -911,6 +908,11 @@ header .navbar {
         --font-size-xxl: 1.8rem;
     }
 
+    .registration-section .fees-and-form-container {
+        display:flex;
+        flex-direction: column;
+    }
+
 }
 
 /* Responsive Design */
@@ -927,6 +929,8 @@ header .navbar {
     .Publication .guidlines-details {
         padding: 15px;
     }
+
+    
 }
 
 /* Responsive media query code for max width 640px */
