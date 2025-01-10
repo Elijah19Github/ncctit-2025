@@ -82,7 +82,7 @@ img {
 
 .section-title {
     text-align: center;
-    padding: 60px 0 60px;
+    padding: 0;
     text-transform: uppercase;
     font-size: var(--font-size-xl);
 }
@@ -312,9 +312,13 @@ header .navbar {
     justify-content: space-between;
 }
 
+.about-section .section-content > * { 
+    flex: 0 0 50%; /* Set flex-basis to 50% */
+}
+
 .about-section .about-image-wrapper .about-image {
-    width: auto;
-    height: 400px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: var(--border-radius-m);
 }
@@ -325,6 +329,8 @@ header .navbar {
     text-align: justify;
     font-size: var(--font-size-s);
     justify-content: space-between;
+    width: 90%;
+    height: auto;
 }
 
 /* .about-section .social-link-list {
@@ -732,7 +738,8 @@ header .navbar {
 
 
     .nav-H-logo {
-        height: 150px ;
+        margin-left: 20px;
+        height: 80px ;
         /* Adjust logo size */
         width: auto;
     }
@@ -748,7 +755,7 @@ header .navbar {
 
     /* Main Heading Styling */
     .H-logo-text {
-        font-size: var(--font-size-xxl);
+        font-size: var(--font-size-m);
     }
 
     .H-logo-text::after {
@@ -763,7 +770,7 @@ header .navbar {
 
     /* Description Text Styling */
     .H-Logo-Description {
-        font-size: var(--font-size-xl);
+        font-size: var(--font-size-s);
         margin-top: 3px;
     }
     
@@ -835,6 +842,11 @@ header .navbar {
         font-size: var(--font-size-xxl);
     }
 
+    .navbar :where(#menu-close-button, #menu-open-button) {
+        width: 40px; /* Adjust as needed */
+        height: 40px; /* Adjust as needed */
+    }
+
     .about-section .section-content {
         flex-direction: column;
         gap: 50px;
@@ -850,6 +862,24 @@ header .navbar {
         margin: 50px 20px 70px 20px;
 
     }
+/* <!-- organizing committee --> */
+    .committee-title {
+        font-size: var(--font-size-l);
+    }
+
+    .committee-group ul li span.name {
+        font-size: var(--font-size-m);
+    }
+    
+    .committee-group ul li span.designation {
+        font-size: var(--font-size-s);
+    }
+    
+    .committee-group p {
+        font-size: var(--font-size-s);
+        text-align: center;
+    }
+
 
     .footer-container {
         flex-direction: column;
@@ -870,25 +900,6 @@ header .navbar {
         border-radius: 8px;
         overflow: hidden;
     }
-
-    .committee-title {
-        font-size: var(--font-size-xl);
-    }
-
-    .committee-group ul li span.name {
-        font-size: var(--font-size-l);
-    }
-    
-    .committee-group ul li span.designation {
-        font-size: var(--font-size-m);
-    }
-    
-    .committee-group p {
-        font-size: var(--font-size-xs);
-        text-align: center;
-    }
-
-
 }
 
 /* Responsive media query code for max width 900px */
