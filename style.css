@@ -125,7 +125,7 @@ header {
 
 header .navbar {
     display: flex;
-    padding: 10px 30px 20px 0px;
+    padding: 7px 30px 7px 0px;
     align-items: center;
     justify-content: space-between;
 }
@@ -188,7 +188,7 @@ header .navbar {
 }
 
 .navbar .nav-menu .nav-link {
-    padding: 0px 15px;
+    padding: 5px 15px;
     color: var(--white-color);
     font-size: var(--font-size-s);
     border-radius: var(--border-radius-m);
@@ -246,7 +246,7 @@ header .navbar {
 /* Title t1 styling */
 .banner-section .hero-details .t1 {
     font-size: var(--font-size-xxl);
-    color: #FF5733;  /* Example color for t1 (National Conference On) */
+    color: #f86341;  /* Example color for t1 (National Conference On) */
     font-family: "Headland One", serif;
     margin-bottom: 10px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); 
@@ -255,7 +255,7 @@ header .navbar {
 /* Title t2 styling */
 .banner-section .hero-details .t2 {
     font-size: var(--font-size-xxl);
-    color: #33B5FF;  /* Example color for t2 (Current Trends In IT) */
+    color: #20adff;  /* Example color for t2 (Current Trends In IT) */
     font-family: "Headland One", serif;
     margin-bottom: 10px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Shadow effect for t1 */
@@ -264,7 +264,7 @@ header .navbar {
 /* Title t3 styling */
 .banner-section .hero-details .t3 {
     font-size: var(--font-size-xxl);
-    color: #4CAF50;  /* Example color for t3 (NCCTIT-2025) */
+    color: #46df4b;  /* Example color for t3 (NCCTIT-2025) */
     font-family: "Headland One", serif;
     margin-bottom: 10px;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);  /* Shadow effect for t1 */
@@ -380,6 +380,10 @@ header .navbar {
     font-size: var(--font-size-m);
 }
 
+.topics-section .topics-details .text .bold {
+    font-weight: bold;
+}
+
 .topics-section .topics-details .topics-list {
     font-size: var(--font-size-l);
     text-align: center;
@@ -446,6 +450,12 @@ header .navbar {
     text-align: justify;
     justify-content: space-between;
     font-size: var(--font-size-m);
+}
+
+.guidlines .text .color {
+    color: #f48634;
+    font-weight: bold;
+
 }
 
 /* Important Dates Styling */
@@ -566,6 +576,7 @@ header .navbar {
 }
 
 .committee-group ul li span.name {
+    margin-right: 10px;
     font-weight: bold;
     font-size: var(--font-size-m);
     color: #333;
@@ -679,22 +690,27 @@ header .navbar {
     font-family: Arial, sans-serif;
 }
 
-.footer-container {
+.footer-section .footer .copyright-text {
+    font-size: var(--font-size-s);
+}
+
+/* .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
+    font-size: var(--font-size-xs);
+} */
 
-.footer-info,
+/* .footer-info,
 .footer-links,
 .footer-contact {
     flex: 1;
     margin: 10px;
     min-width: 250px;
-}
+} */
 
 
 .footer-section p,
@@ -709,13 +725,13 @@ header .navbar {
     /* Hover effect */
 }
 
-.footer-bottom {
+/* .footer-bottom {
     text-align: center;
     border-top: 1px solid #7f8c8d;
     padding-top: 10px;
     margin-top: 10px;
-    font-size: 14px;
-}
+    font-size: var(--font-size-xxs);
+} */
 
 /* Responsive media query code for max width 1024px */
 @media screen and (max-width: 1024px) {
@@ -809,6 +825,8 @@ header .navbar {
 
     .navbar #menu-open-button {
         color: var(--white-color);
+        font-size: 0.9em; /* Reduce font size by 20% */
+        
     }
 
 
