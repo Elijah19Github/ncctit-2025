@@ -115,6 +115,10 @@ img {
     background: var(--primary-color);
 }
 
+body {
+    
+}
+
 /* Navbar styling */
 header {
     position: fixed;
@@ -678,6 +682,22 @@ header .navbar {
 
 /* Form Styling */
 
+
+/* Partnership section */
+.partnership .img-container {
+    margin: 00px;
+    margin-top: 70px;
+    margin-bottom: 100px;
+
+}
+
+.partnership .img-container img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    
+}
 
 /* Footer Styling */
 .footer-section {
